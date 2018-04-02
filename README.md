@@ -13,8 +13,8 @@ is not a number or is a number outside the before mentioned ranges
 respectively, then the input is displayed without any change and the
 filters don't have any effect.
 
-To use the filters you have to include the app in the `settings.py` of
-your Django project:
+To use the filters you have to include the app in the ``settings.py``
+of your Django project:
 
     INSTALLED_APPS = (
         # other entries
