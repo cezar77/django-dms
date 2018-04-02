@@ -28,4 +28,4 @@ In your templates you can use the template filters like this:
 
 The output will be:
 
-    38&deg; 53&#39; 23&quot; N
+    38° 53' 23" N
