@@ -1,9 +1,14 @@
+import math
+import numbers
+
 from django import template
 
 register = template.Library()
 
 @register.filter
 def longitude(value):
+    if not isinstance(value, numbers.Number):
+        return value
     if value > 180 or value < -180:
         return value
     if value > 0:
@@ -12,10 +17,12 @@ def longitude(value):
         side = 'W'
     else:
         side = ''
-    return get_degree(abs(value), side)
+    return get_degree(value, side)
 
 @register.filter
 def latitude(value):
+    if not isinstance(value, numbers.Number):
+        return value
     if value > 90 or value < -90:
         return value
     if value > 0:
@@ -24,17 +31,18 @@ def latitude(value):
         side = 'S'
     else:
         side = ''
-    return get_degree(abs(value), side)
+    return get_degree(value, side)
 
 def get_degree(value, side):
-    result = u'{deg}\u00b0 {min}\' {sec}" {side}'
-    degree = int(value)
-    minute = int((value - degree) * 60)
-    second = round((((value - degree) * 60) - minute) * 60)
-    if second >= 60:
-        second = 0
-        minute += 1
-    minute = str(minute).zfill(2)
-    second = str(second).zfill(2)
-    return result.format(side=side, deg=degree, min=minute, sec=second)
+    result = u'{d}\u00b0 {m}\' {s}" {side}'
+    abs_value = math.fabs(value)
+    degrees = math.trunc(abs_value)
+    minutes = math.trunc((abs_value * 60) % 60)
+    seconds = round((abs_value * 3600) % 60)
+    if seconds >= 60:
+        seconds = 0
+        minutes += 1
+    minutes = str(minutes).zfill(2)
+    seconds = str(seconds).zfill(2)
+    return result.format(side=side, d=degrees, m=minutes, s=seconds)
 
