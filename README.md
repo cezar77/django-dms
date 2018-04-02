@@ -1,5 +1,5 @@
-DMS
-===
+django_dms
+==========
 
 Description
 -----------
@@ -23,7 +23,7 @@ of your Django project:
 
     INSTALLED_APPS = (
         # other entries
-        'dms',
+        'django_dms',
     )
 
 In your templates you can use the template filters like this:
