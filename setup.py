@@ -13,16 +13,18 @@ setup(
     packages=find_packages(),
     license="GPL-3.0",
     include_package_data = True,
-    description="A Django templatetag for degree-minute-second notation",
-    long_description=("A Django templatetag for degree-minute-second notation."
-                      " It displays decimal angle values in a human readable "
-                      "format in the degree-minute-second notation. It's main "
-                      "purpose is to proivide human readable values for the "
-                      "geographical information - longitude and latitude."),
+    description=("A Django template filter for displaying longitude and "
+                 " latitude in degrees-minutes-seconds notation"),
+    long_description=("A Django template filter for displaying longitude and "
+                      " latitude in degrees-minutes-seconds notation. "
+                      "It displays decimal angle values of longitude and "
+                      "latitude in a human readable format in the "
+                      "degrees-minutes-seconds notation."),
     author="Cezar Pendarovski",
     author_email="cezarpendarovski@web.de",
     maintainer="Cezar Pendarovski",
     maintainer_email="cezarpendarovski@web.de",
+    url="https://github.com/cezar77/django-dms",
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
