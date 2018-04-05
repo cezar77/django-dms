@@ -1,10 +1,10 @@
-django_dms
+django-dms
 ==========
 
 Description
 -----------
 
-django_dms is a Django template filter for displaying decimal degrees of
+django-dms is a Django template filter for displaying decimal degrees of
 angles (longitude and latitude) in the Degrees-Minutes-Seconds
 notation.  
 It contains the filters `longitude` and `latitude`. They both take a
@@ -18,6 +18,8 @@ effect.
 Install
 -------
 
+You can install django-dms with `pip`:
+
     pip install django-dms
 
 Use
@@ -27,8 +29,8 @@ To use the filters you have to include the app in the `settings.py`
 of your Django project:
 
     INSTALLED_APPS = (
-        # other entries
-        'django_dms',
+    # other entries
+    'django_dms',
     )
 
 In your templates you can use the template filters like this:
