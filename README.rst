@@ -28,7 +28,7 @@ Use
 To use the filters you have to include the app in the `settings.py`
 of your Django project:
 
-.. code-block:: python
+.. code:: python
     INSTALLED_APPS = (
     # other entries
     'django_dms',
