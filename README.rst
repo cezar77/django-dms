@@ -28,12 +28,11 @@ Use
 To use the filters you have to include the app in the `settings.py`
 of your Django project:
 
-```python
-INSTALLED_APPS = (
-# other entries
-'django_dms',
-)
-```
+.. code-block:: python
+    INSTALLED_APPS = (
+    # other entries
+    'django_dms',
+    )
 
 In your templates you can use the template filters like this:
 
