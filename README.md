@@ -15,6 +15,11 @@ a number outside the before mentioned ranges respectively, then the
 input is displayed without any change and the filters don't have any
 effect.
 
+Install
+-------
+
+    pip install django-dms
+
 Use
 ---
 
