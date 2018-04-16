@@ -4,16 +4,17 @@ django-dms
 Description
 -----------
 
-| django-dms is a Django template filter for displaying decimal degrees
-  of angles (longitude and latitude) in the Degrees-Minutes-Seconds
-  notation.
-| It contains the filters ``longitude`` and ``latitude``. They both take
-  a number as input and convert it into a DMS value. The filter
-  ``longitude`` accepts any number between -180 and 180, the filter
-  ``latitude`` accepts any number between -90 and 90. If the input value
-  is not a number or is a number outside the before mentioned ranges
-  respectively, then the input is displayed without any change and the
-  filters don't have any effect.
+django-dms is a Django template filter for displaying decimal degrees
+of angles (longitude and latitude) in the Degrees-Minutes-Seconds
+notation.
+
+It contains the filters ``longitude`` and ``latitude``. They both take
+a number as input and convert it into a DMS value. The filter
+``longitude`` accepts any number between -180 and 180, the filter
+``latitude`` accepts any number between -90 and 90. If the input value
+is not a number or is a number outside the before mentioned ranges
+respectively, then the input is displayed without any change and the
+filters don't have any effect.
 
 Install
 -------
