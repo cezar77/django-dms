@@ -33,8 +33,8 @@ your Django project:
 .. code:: python
 
     INSTALLED_APPS = (
-    # other entries
-    'django_dms',
+        # other entries
+        'django_dms',
     )
 
 In your templates you can use the template filters like this:
